@@ -1,0 +1,21 @@
+{
+  "name": "gunjannagar-khanepani-cms",
+  "version": "1.0.0",
+  "description": "Gunjannagar Khane Pani Aayojana - Official Water Supply CMS Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "echo 'No build process required - using CDN assets'",
+    "build": "echo 'No build process required - using CDN assets'",
+    "preview": "echo 'No build process required - using CDN assets'"
+  },
+  "keywords": [
+    "laravel",
+    "cms",
+    "water-supply",
+    "nepal"
+  ],
+  "author": "Gunjannagar Khane Pani Aayojana",
+  "license": "proprietary",
+  "dependencies": {},
+  "devDependencies": {}
+}

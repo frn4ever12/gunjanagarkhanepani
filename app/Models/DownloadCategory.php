@@ -1,0 +1,33 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class DownloadCategory extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'slug',
+        'description',
+        'order',
+        'is_active',
+    ];
+
+    protected $casts = [
+        'is_active' => 'boolean',
+    ];
+
+    public function downloads()
+    {
+        return $this->hasMany(Download::class);
+    }
+
+    public function activeDownloads()
+    {
+        return $this->hasMany(Download::class)->where('is_active', true);
+    }
+}

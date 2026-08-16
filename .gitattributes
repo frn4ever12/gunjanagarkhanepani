@@ -1,0 +1,15 @@
+* text=auto
+*.css linguist-language=CSS
+*.html linguist-language=HTML
+*.js linguist-language=JavaScript
+*.json linguist-language=JSON
+*.md linguist-language=Markdown
+*.php linguist-language=PHP
+*.sql linguist-language=SQL
+*.xml linguist-language=XML
+*.yml linguist-language=YAML
+*.yaml linguist-language=YAML
+
+/public/storage linguist-vendored
+/vendor linguist-vendored
+/node_modules linguist-vendored
