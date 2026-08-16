@@ -246,7 +246,7 @@ use App\Models\Setting;
             color: white;
             padding: 20px 18px;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 14px;
             border-bottom: 3px solid transparent;
             transition: all 0.3s;
             display: flex;
@@ -1173,48 +1173,166 @@ use App\Models\Setting;
         }
         
         @media (max-width: 767px) {
+            .hero-split-section .row {
+                flex-direction: column;
+            }
+            
+            .hero-split-section .col-lg-8,
+            .hero-split-section .col-md-8,
+            .hero-split-section .col-lg-4,
+            .hero-split-section .col-md-4 {
+                width: 100%;
+            }
+            
             .hero-slider {
-                height: 350px;
+                height: 300px;
             }
             
             .slider-overlay {
-                padding: 25px 30px;
+                padding: 20px 25px;
             }
             
             .slider-content h2 {
-                font-size: 28px;
+                font-size: 22px;
+                margin-bottom: 10px;
             }
             
             .slider-content p {
-                font-size: 15px;
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+            
+            .btn-hero-cta {
+                font-size: 13px;
+                padding: 8px 16px;
+            }
+            
+            .officials-panel {
+                min-height: auto;
+                margin-top: 20px;
+            }
+            
+            .officials-header h3 {
+                font-size: 18px;
             }
             
             .official-photo {
-                width: 70px;
-                height: 70px;
+                width: 60px;
+                height: 60px;
             }
             
             .official-photo-placeholder {
-                width: 70px;
-                height: 70px;
-                font-size: 28px;
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
             }
             
             .official-card-new {
-                padding: 15px;
-                gap: 12px;
+                padding: 12px;
+                gap: 10px;
             }
             
             .official-card-right h4 {
-                font-size: 15px;
+                font-size: 14px;
             }
             
             .official-card-right .designation {
-                font-size: 13px;
+                font-size: 12px;
             }
             
             .official-card-right .contact-info {
+                font-size: 11px;
+            }
+            
+            .slider-counter {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 575px) {
+            .hero-slider {
+                height: 250px;
+            }
+            
+            .slider-overlay {
+                padding: 15px 20px;
+            }
+            
+            .slider-content h2 {
+                font-size: 18px;
+            }
+            
+            .slider-content p {
+                font-size: 13px;
+            }
+            
+            .official-card-new {
+                padding: 10px;
+            }
+            
+            .official-photo,
+            .official-photo-placeholder {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            
+            .section-title h2 {
+                font-size: 24px;
+            }
+            
+            .stat-item {
+                padding: 15px 10px;
+            }
+            
+            .stat-item h3 {
+                font-size: 24px;
+            }
+            
+            .stat-item p {
                 font-size: 12px;
+            }
+            
+            .service-card {
+                padding: 20px 15px;
+            }
+            
+            .service-card h3 {
+                font-size: 16px;
+            }
+            
+            .notice-card,
+            .news-card {
+                padding: 15px;
+            }
+            
+            .notice-card h3,
+            .news-card h3 {
+                font-size: 14px;
+            }
+            
+            .download-card {
+                padding: 15px;
+            }
+            
+            .download-card h4 {
+                font-size: 14px;
+            }
+            
+            .gallery-item {
+                height: 200px;
+            }
+            
+            .faq-item {
+                padding: 15px;
+            }
+            
+            .faq-item h4 {
+                font-size: 14px;
+            }
+            
+            .contact-form .form-control {
+                font-size: 14px;
             }
         }
         
@@ -1699,52 +1817,139 @@ use App\Models\Setting;
         
         /* Responsive */
         @media (max-width: 991px) {
+            /* Hide main header on mobile */
             .main-header {
-                text-align: center;
-                padding: 10px 0;
-                min-height: auto;
-                max-height: none;
+                display: none;
             }
             
-            .logo-section {
-                justify-content: center;
-                flex-direction: column;
-                gap: 8px;
+            /* Style nav bar as compact mobile header */
+            .main-nav {
+                background: white;
+                padding: 0;
+                min-height: 70px;
+                max-height: 70px;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+                border-bottom: 1px solid #e0e0e0;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
             }
             
-            .logo-img,
-            .logo-placeholder {
-                margin-right: 0;
+            .main-nav .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 70px;
+                padding: 0 15px;
+            }
+            
+            /* Mobile logo styling */
+            .mobile-logo {
+                display: flex;
+                align-items: center;
+                order: 1;
+                margin-right: auto;
+                gap: 10px;
+            }
+            
+            .mobile-logo img {
                 height: 55px;
+                width: auto;
+                max-width: 140px;
+                object-fit: contain;
+            }
+            
+            .mobile-logo-placeholder {
                 width: 55px;
-                font-size: 24px;
-            }
-            
-            .logo-text h1 {
-                font-size: 20px;
-            }
-            
-            .logo-text .tagline {
-                font-size: 12px;
-            }
-            
-            .header-buttons {
-                margin-top: 10px;
+                height: 55px;
+                background: linear-gradient(135deg, var(--primary-blue), var(--water-blue));
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
                 justify-content: center;
+                color: white;
+                font-size: 24px;
+                flex-shrink: 0;
             }
             
-            .header-buttons .btn {
-                margin: 3px 5px;
-                font-size: 12px;
-                padding: 6px 12px;
-                height: 36px;
+            .mobile-logo-text {
+                display: flex;
+                flex-direction: column;
+                line-height: 1.2;
             }
             
+            .mobile-logo-text h1 {
+                font-size: 14px;
+                font-weight: 700;
+                color: var(--primary-blue);
+                margin: 0;
+                line-height: 1.2;
+            }
+            
+            .mobile-logo-text .tagline {
+                font-size: 10px;
+                color: var(--water-green);
+                margin: 2px 0 0 0;
+                font-weight: 500;
+                line-height: 1.2;
+            }
+            
+            .mobile-logo-text .address {
+                font-size: 9px;
+                color: #666;
+                margin: 2px 0 0 0;
+                font-weight: 400;
+                line-height: 1.1;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 150px;
+            }
+            
+            /* Mobile hamburger positioning */
+            .main-nav .navbar-toggler {
+                order: 3;
+                border: none;
+                padding: 8px;
+                margin-left: 10px;
+            }
+            
+            .main-nav .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(13, 71, 161, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+                width: 24px;
+                height: 24px;
+            }
+            
+            /* Language switcher positioning - keep in header on mobile */
+            .language-switcher {
+                order: 2;
+                margin-left: auto;
+                margin-right: 10px;
+                position: static;
+                border-left: none;
+                margin-top: 0;
+                padding-top: 0;
+                border-top: none;
+                height: auto;
+            }
+            
+            .language-switcher .lang-btn {
+                font-size: 13px;
+                padding: 4px 8px;
+                min-width: 35px;
+            }
+            
+            /* Navbar collapse styling */
             .main-nav .navbar-collapse {
                 background: var(--primary-blue);
                 padding: 15px 0;
                 margin-top: 10px;
                 border-radius: 8px;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                z-index: 999;
             }
             
             .main-nav .navbar-nav {
@@ -1794,16 +1999,6 @@ use App\Models\Setting;
                 background: rgba(255,255,255,0.2);
                 color: white;
                 padding-left: 15px;
-            }
-            
-            .language-switcher {
-                margin-left: 0;
-                padding-left: 0;
-                border-left: none;
-                margin-top: 12px;
-                padding-top: 12px;
-                border-top: 1px solid rgba(255,255,255,0.2);
-                height: auto;
             }
             
             .search-box {
@@ -1907,6 +2102,24 @@ use App\Models\Setting;
     <!-- Navigation -->
     <nav class="main-nav navbar navbar-expand-lg">
         <div class="container">
+            <!-- Mobile Logo -->
+            <a href="{{ route('home') }}" class="mobile-logo d-lg-none">
+                @if(Setting::get('logo'))
+                <img src="{{ asset('storage/' . Setting::get('logo')) }}" alt="{{ Setting::get('site_name_np', 'गुन्जनगर खानेपानी आयोजना') }}">
+                @else
+                <div class="mobile-logo-placeholder">
+                    <i class="fas fa-tint"></i>
+                </div>
+                @endif
+                <div class="mobile-logo-text">
+                    <h1>{{ Setting::get('site_name_np', 'गुन्जनगर खानेपानी आयोजना') }}</h1>
+                    <p class="tagline">{{ Setting::get('tagline_np', 'स्वच्छ पानी, स्वस्थ जीवन') }}</p>
+                    @if(Setting::get('office_address'))
+                    <p class="address">{{ Setting::get('office_address') }}</p>
+                    @endif
+                </div>
+            </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
