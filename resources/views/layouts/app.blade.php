@@ -864,6 +864,9 @@ use App\Models\Setting;
         
         .bg-light {
             background-color: #f8f9fa !important;
+            position: relative;
+            z-index: 1;
+            overflow: visible;
         }
         
         /* Fix carousel positioning */

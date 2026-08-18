@@ -367,7 +367,7 @@ use Illuminate\Support\Str;
 
 <!-- Important Links Section -->
 @if($importantLinks && $importantLinks->count() > 0)
-<section class="py-5 bg-light">
+<section class="py-5 bg-light" style="position: relative; z-index: 1; overflow: visible;">
     <div class="container">
         <div class="section-title">
             <h2>महत्वपूर्ण लिंकहरू</h2>
@@ -394,23 +394,23 @@ use Illuminate\Support\Str;
 
 <!-- FAQ Section -->
 @if($faqs && $faqs->count() > 0)
-<section class="py-5" id="faq">
-    <div class="container">
+<section class="py-5" id="faq" style="position: relative; z-index: 2; overflow: visible; background: white;">
+    <div class="container" style="position: relative; z-index: 2;">
         <div class="section-title">
             <h2>बारम्बार सोधिने प्रश्नहरू (FAQ)</h2>
             <div class="divider"></div>
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <div class="accordion" id="faqAccordion">
+                <div class="accordion" id="faqAccordion" style="position: relative; z-index: 2;">
                     @foreach($faqs as $index => $faq)
-                    <div class="accordion-item">
+                    <div class="accordion-item" style="position: relative; z-index: 2;">
                         <h2 class="accordion-header" id="heading{{ $index }}">
                             <button class="accordion-button {{ $index !== 0 ? 'collapsed' : '' }}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ $index }}" aria-expanded="{{ $index === 0 ? 'true' : 'false' }}">
                                 {{ $faq->question }}
                             </button>
                         </h2>
-                        <div id="collapse{{ $index }}" class="accordion-collapse collapse {{ $index === 0 ? 'show' : '' }}" data-bs-parent="#faqAccordion">
+                        <div id="collapse{{ $index }}" class="accordion-collapse collapse {{ $index === 0 ? 'show' : '' }}" data-bs-parent="#faqAccordion" style="position: relative; z-index: 2;">
                             <div class="accordion-body">
                                 {{ $faq->answer }}
                             </div>
