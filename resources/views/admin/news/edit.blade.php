@@ -31,7 +31,7 @@
                 <label class="form-label">विशेष चित्र</label>
                 <input type="file" class="form-control" name="featured_image">
                 @if($news->featured_image)
-                <small class="text-muted">Current: <a href="{{ asset('storage/' . $news->featured_image) }}" target="_blank">View Image</a></small>
+                <small class="text-muted">Current: <a href="{{ asset($news->featured_image) }}" target="_blank">View Image</a></small>
                 @endif
             </div>
             
@@ -39,7 +39,7 @@
                 <label class="form-label">संलग्नक</label>
                 <input type="file" class="form-control" name="attachment">
                 @if($news->attachment)
-                <small class="text-muted">Current: <a href="{{ asset('storage/' . $news->attachment) }}" target="_blank">View File</a></small>
+                <small class="text-muted">Current: <a href="{{ asset($news->attachment) }}" target="_blank">View File</a></small>
                 @endif
             </div>
             

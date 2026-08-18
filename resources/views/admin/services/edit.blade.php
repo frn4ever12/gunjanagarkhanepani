@@ -36,7 +36,7 @@
                 <label class="form-label">चित्र</label>
                 <input type="file" class="form-control" name="image">
                 @if($service->image)
-                <small class="text-muted">Current: <a href="{{ asset('storage/' . $service->image) }}" target="_blank">View Image</a></small>
+                <small class="text-muted">Current: <a href="{{ asset($service->image) }}" target="_blank">View Image</a></small>
                 @endif
             </div>
             

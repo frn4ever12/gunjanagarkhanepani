@@ -47,7 +47,7 @@
                     <label class="form-label">संलग्नक</label>
                     <input type="file" class="form-control" name="attachment">
                     @if($tariff->attachment)
-                    <small class="text-muted">Current: <a href="{{ asset('storage/' . $tariff->attachment) }}" target="_blank">View File</a></small>
+                <small class="text-muted">Current: <a href="{{ asset($tariff->attachment) }}" target="_blank">View File</a></small>
                     @endif
                 </div>
             </div>

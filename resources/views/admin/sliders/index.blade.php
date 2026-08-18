@@ -32,7 +32,7 @@
                             @if(str_starts_with($slider->image, 'http://') || str_starts_with($slider->image, 'https://'))
                             <img src="{{ $slider->image }}" alt="{{ $slider->title }}" style="width: 100px; height: 50px; object-fit: cover;">
                             @else
-                            <img src="{{ asset('storage/' . $slider->image) }}" alt="{{ $slider->title }}" style="width: 100px; height: 50px; object-fit: cover;">
+                            <img src="{{ asset($slider->image) }}" alt="{{ $slider->title }}" style="width: 100px; height: 50px; object-fit: cover;">
                             @endif
                             @else
                             <span class="badge bg-secondary">No Image</span>

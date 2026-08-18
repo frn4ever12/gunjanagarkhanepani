@@ -36,7 +36,7 @@
                 <label class="form-label">फाइल</label>
                 <input type="file" class="form-control" name="file">
                 @if($download->file)
-                <small class="text-muted">Current: <a href="{{ asset('storage/' . $download->file) }}" target="_blank">View File</a> ({{ $download->file_size_formatted }})</small>
+                <small class="text-muted">Current: <a href="{{ asset($download->file) }}" target="_blank">View File</a></small> ({{ $download->file_size_formatted }})
                 @endif
             </div>
             

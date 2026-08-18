@@ -26,7 +26,7 @@
                 <label class="form-label">कभर चित्र</label>
                 <input type="file" class="form-control" name="cover_image">
                 @if($album->cover_image)
-                <small class="text-muted">Current: <a href="{{ asset('storage/' . $album->cover_image) }}" target="_blank">View Image</a></small>
+                <small class="text-muted">Current: <a href="{{ asset($album->cover_image) }}" target="_blank">View Image</a></small>
                 @endif
             </div>
             

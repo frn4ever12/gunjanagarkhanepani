@@ -30,7 +30,7 @@
                     <tr>
                         <td>
                             @if($official->photo)
-                            <img src="{{ asset('storage/' . $official->photo) }}" alt="{{ $official->name }}" class="rounded-circle" width="50" height="50">
+                            <img src="{{ asset($official->photo) }}" alt="{{ $official->name }}" class="rounded-circle" width="50" height="50">
                             @else
                             <span class="badge bg-secondary">No Photo</span>
                             @endif

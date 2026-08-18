@@ -34,7 +34,7 @@
                 <div class="row mb-3">
                     <div class="col-md-4"><strong>संलग्नक:</strong></div>
                     <div class="col-md-8">
-                        <a href="{{ asset('storage/' . $message->attachment) }}" target="_blank" class="btn btn-sm btn-primary">
+                        <a href="{{ asset($message->attachment) }}" target="_blank" class="btn btn-sm btn-primary">
                             <i class="fas fa-download me-1"></i>Download
                         </a>
                     </div>

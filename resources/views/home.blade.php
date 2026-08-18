@@ -22,7 +22,7 @@ use Illuminate\Support\Str;
                             @if(str_starts_with($slider->image, 'http://') || str_starts_with($slider->image, 'https://'))
                             <img src="{{ $slider->image }}" alt="{{ $slider->title }}" class="d-block w-100">
                             @else
-                            <img src="{{ asset('storage/' . $slider->image) }}" alt="{{ $slider->title }}" class="d-block w-100">
+                            <img src="{{ asset($slider->image) }}" alt="{{ $slider->title }}" class="d-block w-100">
                             @endif
                             @endif
                             <div class="slider-overlay">
@@ -69,7 +69,7 @@ use Illuminate\Support\Str;
                         <div class="official-card-new">
                             <div class="official-card-left">
                                 @if($official->photo)
-                                <img src="{{ asset('storage/' . $official->photo) }}" alt="{{ $official->name }}" class="official-photo">
+                                <img src="{{ asset($official->photo) }}" alt="{{ $official->name }}" class="official-photo">
                                 @else
                                 <div class="official-photo-placeholder">
                                     {{ substr($official->name, 0, 1) }}
@@ -130,7 +130,7 @@ use Illuminate\Support\Str;
                             @if(str_starts_with($slider->image, 'http://') || str_starts_with($slider->image, 'https://'))
                             <img src="{{ $slider->image }}" alt="{{ $slider->title }}" class="d-block w-100" style="height: 300px; object-fit: cover;">
                             @else
-                            <img src="{{ asset('storage/' . $slider->image) }}" alt="{{ $slider->title }}" class="d-block w-100" style="height: 300px; object-fit: cover;">
+                            <img src="{{ asset($slider->image) }}" alt="{{ $slider->title }}" class="d-block w-100" style="height: 300px; object-fit: cover;">
                             @endif
                             @endif
                             @if($slider->show_overlay)
@@ -238,7 +238,7 @@ use Illuminate\Support\Str;
                                 <i class="fas fa-calendar me-1"></i>{{ $notice->publish_date->format('Y-m-d') }}
                             </small>
                             @if($notice->attachment)
-                            <a href="{{ asset('storage/' . $notice->attachment) }}" class="btn btn-sm btn-outline-primary" download>
+                            <a href="{{ asset($notice->attachment) }}" class="btn btn-sm btn-outline-primary" download>
                                 <i class="fas fa-download me-1"></i>Download
                             </a>
                             @endif
@@ -255,7 +255,7 @@ use Illuminate\Support\Str;
                 @foreach($latestNews as $news)
                 <div class="content-card mb-3">
                     @if($news->featured_image)
-                    <div class="card-image" style="background-image: url('{{ asset('storage/' . $news->featured_image) }}')"></div>
+                    <div class="card-image" style="background-image: url('{{ asset($news->featured_image) }}')"></div>
                     @endif
                     <div class="card-body">
                         <h4>{{ $news->title }}</h4>
@@ -295,7 +295,7 @@ use Illuminate\Support\Str;
                         @endif
                         <p class="small text-muted">{{ $tariff->description }}</p>
                         @if($tariff->attachment)
-                        <a href="{{ asset('storage/' . $tariff->attachment) }}" class="btn btn-outline-primary btn-sm" download>
+                        <a href="{{ asset($tariff->attachment) }}" class="btn btn-outline-primary btn-sm" download>
                             <i class="fas fa-download me-1"></i>Download Details
                         </a>
                         @endif
@@ -327,7 +327,7 @@ use Illuminate\Support\Str;
                         <h5>{{ $download->title }}</h5>
                         <span class="file-type">{{ strtoupper($download->file_type) }} - {{ $download->file_size_formatted }}</span>
                     </div>
-                    <a href="{{ asset('storage/' . $download->file) }}" class="btn btn-download" download>
+                    <a href="{{ asset($download->file) }}" class="btn btn-download" download>
                         <i class="fas fa-download"></i>
                     </a>
                 </div>
@@ -350,7 +350,7 @@ use Illuminate\Support\Str;
             @foreach($galleryImages as $image)
             <div class="col-md-4 mb-4">
                 <div class="gallery-item">
-                    <img src="{{ asset('storage/' . $image->image) }}" alt="{{ $image->title }}">
+                    <img src="{{ asset($image->image) }}" alt="{{ $image->title }}">
                     <div class="overlay">
                         <h5>{{ $image->title }}</h5>
                         @if($image->album)

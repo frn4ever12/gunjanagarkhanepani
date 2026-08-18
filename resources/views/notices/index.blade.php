@@ -27,7 +27,7 @@ use Illuminate\Support\Str;
                         विस्तृत हेर्नुहोस्
                     </a>
                     @if($notice->attachment)
-                    <a href="{{ asset('storage/' . $notice->attachment) }}" class="btn btn-outline-primary ms-2" download>
+                    <a href="{{ asset($notice->attachment) }}" class="btn btn-outline-primary ms-2" download>
                         <i class="fas fa-download"></i>
                     </a>
                     @endif
