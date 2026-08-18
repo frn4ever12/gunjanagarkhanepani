@@ -26,7 +26,7 @@ use App\Models\Setting;
                         <input type="file" class="form-control" name="logo" accept="image/*">
                         @if(Setting::get('logo'))
                         <div class="mt-2">
-                            <img src="{{ asset('storage/' . Setting::get('logo')) }}" alt="Current Logo" style="max-height: 80px;">
+                            <img src="{{ asset(Setting::get('logo')) }}" alt="Current Logo" style="max-height: 80px;">
                         </div>
                         @endif
                     </div>
