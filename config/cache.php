@@ -13,6 +13,12 @@ return [
             'driver' => 'array',
             'serialize' => false,
         ],
+        'database' => [
+            'driver' => 'database',
+            'table' => env('CACHE_DATABASE_TABLE', 'cache'),
+            'connection' => env('CACHE_DATABASE_CONNECTION', null),
+            'lock_connection' => env('CACHE_LOCK_CONNECTION', null),
+        ],
     ],
 
     'prefix' => env('CACHE_PREFIX', 'laravel_cache'),
