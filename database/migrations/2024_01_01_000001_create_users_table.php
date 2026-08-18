@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('phone')->nullable();
             $table->string('avatar')->nullable();
-            $table->foreignId('role_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('role_id')->nullable();
             $table->boolean('is_active')->default(true);
             $table->rememberToken();
             $table->timestamps();

@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-body">
                     @if($page->featured_image)
-                    <img src="{{ asset($page->featured_image) }}" alt="{{ $page->title }}" class="img-fluid mb-4">
+                    <img src="{{ asset('storage/' . $page->featured_image) }}" alt="{{ $page->title }}" class="img-fluid mb-4">
                     @endif
                     <h1>{{ $page->title }}</h1>
                     <hr>

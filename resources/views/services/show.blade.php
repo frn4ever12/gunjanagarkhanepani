@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-body">
                     @if($service->image)
-                    <img src="{{ asset($service->image) }}" alt="{{ $service->title }}" class="img-fluid mb-4">
+                    <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}" class="img-fluid mb-4">
                     @endif
                     <h1>{{ $service->title }}</h1>
                     <hr>

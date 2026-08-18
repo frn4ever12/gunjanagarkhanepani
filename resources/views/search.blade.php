@@ -66,7 +66,7 @@
                     <h5>{{ $download->title }}</h5>
                     <span class="file-type">{{ strtoupper($download->file_type) }}</span>
                 </div>
-                <a href="{{ asset($download->file) }}" class="btn btn-download" download>
+                <a href="{{ asset('storage/' . $download->file) }}" class="btn btn-download" download>
                     <i class="fas fa-download"></i>
                 </a>
             </div>

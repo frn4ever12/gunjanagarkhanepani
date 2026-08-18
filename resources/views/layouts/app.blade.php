@@ -2067,7 +2067,7 @@ use App\Models\Setting;
             <div class="row align-items-center">
                 <div class="col-md-6 logo-section d-flex align-items-center">
                     @if(Setting::get('logo'))
-                    <img src="{{ asset(Setting::get('logo')) }}" alt="{{ Setting::get('site_name_np', 'गुन्जनगर खानेपानी आयोजना') }}" class="logo-img">
+                    <img src="{{ asset('storage/' . Setting::get('logo')) }}" alt="{{ Setting::get('site_name_np', 'गुन्जनगर खानेपानी आयोजना') }}" class="logo-img">
                     @else
                     <div class="logo-placeholder">
                         <i class="fas fa-tint"></i>
@@ -2105,7 +2105,7 @@ use App\Models\Setting;
             <!-- Mobile Logo -->
             <a href="{{ route('home') }}" class="mobile-logo d-lg-none">
                 @if(Setting::get('logo'))
-                <img src="{{ asset(Setting::get('logo')) }}" alt="{{ Setting::get('site_name_np', 'गुन्जनगर खानेपानी आयोजना') }}">
+                <img src="{{ asset('storage/' . Setting::get('logo')) }}" alt="{{ Setting::get('site_name_np', 'गुन्जनगर खानेपानी आयोजना') }}">
                 @else
                 <div class="mobile-logo-placeholder">
                     <i class="fas fa-tint"></i>

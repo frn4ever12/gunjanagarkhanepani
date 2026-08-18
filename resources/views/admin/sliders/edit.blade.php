@@ -29,7 +29,7 @@
                 @if(str_starts_with($slider->image, 'http://') || str_starts_with($slider->image, 'https://'))
                 <small class="text-muted">Current: <a href="{{ $slider->image }}" target="_blank">View Image</a></small>
                 @else
-                <small class="text-muted">Current: <a href="{{ asset($slider->image) }}" target="_blank">View Image</a></small>
+                <small class="text-muted">Current: <a href="{{ asset('storage/' . $slider->image) }}" target="_blank">View Image</a></small>
                 @endif
                 @endif
             </div>

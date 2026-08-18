@@ -36,7 +36,7 @@
                 <label class="form-label">विशेष चित्र</label>
                 <input type="file" class="form-control" name="featured_image">
                 @if($page->featured_image)
-                <small class="text-muted">Current: <a href="{{ asset($page->featured_image) }}" target="_blank">View Image</a></small>
+                <small class="text-muted">Current: <a href="{{ asset('storage/' . $page->featured_image) }}" target="_blank">View Image</a></small>
                 @endif
             </div>
             

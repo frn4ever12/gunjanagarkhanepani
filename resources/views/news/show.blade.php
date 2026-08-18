@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-body">
                     @if($news->featured_image)
-                    <img src="{{ asset($news->featured_image) }}" alt="{{ $news->title }}" class="img-fluid mb-4">
+                    <img src="{{ asset('storage/' . $news->featured_image) }}" alt="{{ $news->title }}" class="img-fluid mb-4">
                     @endif
                     <h1>{{ $news->title }}</h1>
                     <small class="text-muted">{{ $news->publish_date->format('Y-m-d') }}</small>
@@ -19,7 +19,7 @@
                     </div>
                     @if($news->attachment)
                     <div class="mt-4">
-                        <a href="{{ asset($news->attachment) }}" class="btn btn-primary" download>
+                        <a href="{{ asset('storage/' . $news->attachment) }}" class="btn btn-primary" download>
                             <i class="fas fa-download me-2"></i>डाउनलोड गर्नुहोस्
                         </a>
                     </div>

@@ -31,7 +31,7 @@
                 <label class="form-label">फोटो</label>
                 <input type="file" class="form-control" name="photo">
                 @if($official->photo)
-                <small class="text-muted">Current: <a href="{{ asset($official->photo) }}" target="_blank">View Photo</a></small>
+                <small class="text-muted">Current: <a href="{{ asset('storage/' . $official->photo) }}" target="_blank">View Photo</a></small>
                 @endif
             </div>
             

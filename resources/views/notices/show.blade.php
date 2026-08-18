@@ -19,7 +19,7 @@
                     </div>
                     @if($notice->attachment)
                     <div class="mt-4">
-                        <a href="{{ asset($notice->attachment) }}" class="btn btn-primary" download>
+                        <a href="{{ asset('storage/' . $notice->attachment) }}" class="btn btn-primary" download>
                             <i class="fas fa-download me-2"></i>डाउनलोड गर्नुहोस्
                         </a>
                     </div>

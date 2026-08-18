@@ -26,7 +26,7 @@
                 <label class="form-label">संलग्नक</label>
                 <input type="file" class="form-control" name="attachment">
                 @if($notice->attachment)
-                <small class="text-muted">Current: <a href="{{ asset($notice->attachment) }}" target="_blank">View File</a></small>
+                <small class="text-muted">Current: <a href="{{ asset('storage/' . $notice->attachment) }}" target="_blank">View File</a></small>
                 @endif
             </div>
             

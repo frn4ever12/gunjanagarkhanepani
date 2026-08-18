@@ -18,7 +18,7 @@
             <div class="col-md-4 mb-4">
                 <div class="card">
                     @if($album->cover_image)
-                    <img src="{{ asset($album->cover_image) }}" alt="{{ $album->name }}" class="card-img-top" style="height: 200px; object-fit: cover;">
+                    <img src="{{ asset('storage/' . $album->cover_image) }}" alt="{{ $album->name }}" class="card-img-top" style="height: 200px; object-fit: cover;">
                     @else
                     <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
                         <i class="fas fa-images fa-3x text-muted"></i>
