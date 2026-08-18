@@ -821,6 +821,7 @@ use App\Models\Setting;
             margin-top: 0;
             width: 100%;
             display: block;
+            overflow: visible;
         }
         
         .hero-split-section {
@@ -831,6 +832,34 @@ use App\Models\Setting;
         .py-5 {
             padding-top: 60px !important;
             padding-bottom: 60px !important;
+        }
+        
+        /* FAQ Section specific fixes - All screen sizes */
+        #faq {
+            position: relative;
+            z-index: 1;
+            overflow: visible;
+            clear: both;
+        }
+        
+        #faq .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        #faq .accordion {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .accordion-item {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .accordion-collapse {
+            position: relative;
+            z-index: 1;
         }
         
         .bg-light {
@@ -1329,6 +1358,46 @@ use App\Models\Setting;
             
             .faq-item h4 {
                 font-size: 14px;
+            }
+            
+            .accordion-item {
+                border: 1px solid #dee2e6;
+                margin-bottom: 10px;
+                border-radius: 0.375rem;
+                overflow: hidden;
+                position: relative;
+            }
+            
+            .accordion-button {
+                font-size: 16px;
+                font-weight: 600;
+                padding: 15px 20px;
+                background-color: #f8f9fa;
+                position: relative;
+            }
+            
+            .accordion-button:not(.collapsed) {
+                background-color: #e9ecef;
+                color: #0d6efd;
+            }
+            
+            .accordion-body {
+                padding: 20px;
+                font-size: 15px;
+                line-height: 1.6;
+                position: relative;
+            }
+            
+            /* FAQ Section specific fixes */
+            #faq {
+                position: relative;
+                z-index: 1;
+                overflow: visible;
+            }
+            
+            #faq .container {
+                position: relative;
+                z-index: 1;
             }
             
             .contact-form .form-control {
